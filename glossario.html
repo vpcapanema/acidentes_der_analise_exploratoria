@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glossário — Acidentes DER</title>
+<link rel="stylesheet" href="referencias/style_global_reset_base.css">
+<link rel="stylesheet" href="referencias/pli_overrides.css">
+<style>
+.glossary { --gl-primary:var(--pli-deep,#003b5a);--gl-accent:var(--pli-green,#3ec26e);--gl-text:var(--pli-text-main,#263746);--gl-surface:white;--gl-border:var(--pli-border,#d5dce6);--gl-radius:var(--pli-radius-md,8px); }
+
+/* Componentes do glossário: cores e fontes vêm do tema da aplicação. */
+body.glossary-page { display:block; width:auto; height:auto; min-height:100vh; overflow:auto; margin:0; padding:0; }
+.glossary { box-sizing:border-box; width:calc(100% - 2rem); max-width:1120px; margin:2rem auto; padding:0; line-height:1.65; color:var(--gl-text); }
+.glossary *, .glossary *::before, .glossary *::after { box-sizing:border-box; }
+.glossary .gl-heading { padding:1.5rem 0; margin:0 0 1.5rem; border-bottom:3px solid var(--gl-accent); background:none; text-align:left; }
+.glossary .gl-brand { margin:0 0 .5rem; color:var(--gl-primary); font-weight:700; letter-spacing:.04em; }
+.glossary h1 { color:var(--gl-primary); font-size:clamp(1.6rem,4vw,2.25rem); line-height:1.2; margin:.5rem 0 1rem; text-align:left; }
+.glossary h2 { color:var(--gl-primary); font-size:1.15rem; line-height:1.4; margin:0 0 1rem; padding:0; border:0; text-align:left; }
+.glossary a { color:var(--gl-primary); text-decoration:underline; text-underline-offset:3px; }
+.glossary .gl-layout { display:grid; grid-template-columns:260px minmax(0,1fr); gap:1.5rem; align-items:start; }
+.glossary .gl-sidebar { position:sticky; top:1rem; background:var(--gl-surface); border:1px solid var(--gl-border); border-radius:var(--gl-radius); padding:1rem; min-width:0; }
+.glossary .gl-search { margin:0 0 1rem; display:block; }
+.glossary label { display:block; font-weight:600; margin:0 0 .5rem; }
+.glossary input { display:block; width:100%; min-height:44px; padding:.6rem; font:inherit; border:1px solid var(--gl-border); border-radius:4px; background:var(--gl-surface); color:var(--gl-text); }
+.glossary button { min-height:44px; padding:.5rem .8rem; margin:.6rem 0; font:inherit; cursor:pointer; background:var(--gl-primary); color:white; border:0; border-radius:4px; }
+.glossary .gl-count { font-size:.9em; margin:0; }
+.glossary summary { cursor:pointer; font-weight:700; color:var(--gl-primary); padding:.5rem 0; }
+.glossary .gl-index { max-height:50vh; overflow:auto; background:none; position:static; display:block; padding:0; margin:0; }
+.glossary .gl-index a { display:block; padding:.3rem 0; font-size:.9em; }
+.glossary .gl-group { padding:1.4rem; margin:0 0 1.25rem; background:var(--gl-surface); border:1px solid var(--gl-border); border-top:3px solid var(--gl-accent); border-radius:var(--gl-radius); box-shadow:none; }
+.glossary dl { margin:0; }
+.glossary .gl-entry { padding:1rem 0; border-top:1px solid var(--gl-border); scroll-margin-top:1.5rem; overflow-wrap:anywhere; }
+.glossary dt { font-weight:700; margin:0 0 .4rem; }
+.glossary dd { margin:0; text-align:left; }
+.glossary .gl-entry:target { outline:2px solid var(--gl-primary); outline-offset:6px; }
+.glossary :focus-visible { outline:3px solid var(--gl-primary); outline-offset:3px; }
+.glossary [hidden] { display:none !important; }
+.glossary .gl-note { font-size:.9em; margin:1.5rem 0; }
+@media(max-width:760px) { .glossary .gl-layout { grid-template-columns:minmax(0,1fr); } .glossary .gl-sidebar { position:static; } .glossary .gl-index { max-height:180px; } .glossary .gl-group { padding:1rem; } }
+@media print { .glossary .gl-sidebar, .glossary .gl-back { display:none; } .glossary .gl-layout { display:block; } .glossary .gl-entry { break-inside:avoid; } }
+
+</style>
+</head>
+<body class="glossary-page">
+<main class="glossary" id="glossario">
+  <header class="gl-heading">
+    <p class="gl-brand">Acidentes DER</p>
+    <a class="gl-back" href="index.html">← Voltar à aplicação</a>
+    <h1>Glossário técnico-conceitual</h1>
+    <p>Termos e conceitos para compreender e utilizar Acidentes DER.</p>
+  </header>
+  <div class="gl-layout">
+    <aside class="gl-sidebar" aria-label="Consulta ao glossário">
+      <form class="gl-search" role="search" hidden>
+        <label for="gl-search">Buscar termo ou conceito</label>
+        <input id="gl-search" type="search" autocomplete="off" aria-controls="gl-content">
+        <button type="reset">Limpar busca</button>
+        <p class="gl-count" role="status" aria-live="polite"></p>
+      </form>
+      <details open><summary>Índice de termos</summary><nav class="gl-index" aria-label="Termos"><a data-term="termo-der-sp" href="#termo-der-sp">DER-SP</a> <a data-term="termo-acidente" href="#termo-acidente">Acidente</a> <a data-term="termo-vitima" href="#termo-vitima">Vítima</a> <a data-term="termo-obito" href="#termo-obito">Óbito</a> <a data-term="termo-rodovia" href="#termo-rodovia">Rodovia</a> <a data-term="termo-quilometragem-km" href="#termo-quilometragem-km">Quilometragem (KM)</a> <a data-term="termo-regional" href="#termo-regional">Regional</a> <a data-term="termo-gravidade" href="#termo-gravidade">Gravidade</a> <a data-term="termo-frequencia" href="#termo-frequencia">Frequência</a> <a data-term="termo-percentil" href="#termo-percentil">Percentil</a> <a data-term="termo-sazonalidade" href="#termo-sazonalidade">Sazonalidade</a> <a data-term="termo-correlacao" href="#termo-correlacao">Correlação</a> <a data-term="termo-taxa" href="#termo-taxa">Taxa</a> <a data-term="termo-densidade-por-faixa-de-km" href="#termo-densidade-por-faixa-de-km">Densidade por faixa de KM</a> <a data-term="termo-comparacao-entre-anos" href="#termo-comparacao-entre-anos">Comparação entre anos</a></nav></details>
+    </aside>
+    <div id="gl-content">
+      <p class="gl-empty" hidden>Nenhum termo encontrado. Tente outra palavra ou limpe a busca.</p>
+      <section class="gl-group"><h2>Registros rodoviários</h2><dl>
+<div class="gl-entry" id="termo-der-sp" tabindex="-1"><dt><a href="#termo-der-sp">DER-SP</a></dt><dd>Departamento de Estradas de Rodagem do Estado de São Paulo, referência da base rodoviária usada nesta análise.</dd></div>
+<div class="gl-entry" id="termo-acidente" tabindex="-1"><dt><a href="#termo-acidente">Acidente</a></dt><dd>Ocorrência registrada na base analisada. A quantidade de acidentes é distinta da quantidade de vítimas.</dd></div>
+<div class="gl-entry" id="termo-vitima" tabindex="-1"><dt><a href="#termo-vitima">Vítima</a></dt><dd>Pessoa afetada por uma ocorrência, conforme os registros e categorias da base.</dd></div>
+<div class="gl-entry" id="termo-obito" tabindex="-1"><dt><a href="#termo-obito">Óbito</a></dt><dd>Morte registrada na fonte de dados no contexto de uma ocorrência.</dd></div>
+<div class="gl-entry" id="termo-rodovia" tabindex="-1"><dt><a href="#termo-rodovia">Rodovia</a></dt><dd>Via identificada na base e utilizada para agrupar ou localizar os acidentes.</dd></div>
+<div class="gl-entry" id="termo-quilometragem-km" tabindex="-1"><dt><a href="#termo-quilometragem-km">Quilometragem (KM)</a></dt><dd>Referência de posição ao longo de uma rodovia, utilizada na análise da distribuição das ocorrências.</dd></div>
+<div class="gl-entry" id="termo-regional" tabindex="-1"><dt><a href="#termo-regional">Regional</a></dt><dd>Divisão territorial administrativa utilizada para agrupar registros na base do DER.</dd></div>
+</dl></section><section class="gl-group"><h2>Indicadores e gráficos</h2><dl>
+<div class="gl-entry" id="termo-gravidade" tabindex="-1"><dt><a href="#termo-gravidade">Gravidade</a></dt><dd>Classificação das consequências do acidente ou da condição das vítimas na base analisada.</dd></div>
+<div class="gl-entry" id="termo-frequencia" tabindex="-1"><dt><a href="#termo-frequencia">Frequência</a></dt><dd>Quantidade de registros observada em uma categoria, intervalo ou território.</dd></div>
+<div class="gl-entry" id="termo-percentil" tabindex="-1"><dt><a href="#termo-percentil">Percentil</a></dt><dd>Valor que delimita uma proporção de observações em uma distribuição ordenada.</dd></div>
+<div class="gl-entry" id="termo-sazonalidade" tabindex="-1"><dt><a href="#termo-sazonalidade">Sazonalidade</a></dt><dd>Padrão de variação que se repete em determinados períodos do calendário.</dd></div>
+<div class="gl-entry" id="termo-correlacao" tabindex="-1"><dt><a href="#termo-correlacao">Correlação</a></dt><dd>Associação estatística entre variáveis. Não comprova, isoladamente, uma relação causal.</dd></div>
+<div class="gl-entry" id="termo-taxa" tabindex="-1"><dt><a href="#termo-taxa">Taxa</a></dt><dd>Razão entre uma contagem e uma base de referência. O denominador e o período precisam acompanhar sua interpretação.</dd></div>
+<div class="gl-entry" id="termo-densidade-por-faixa-de-km" tabindex="-1"><dt><a href="#termo-densidade-por-faixa-de-km">Densidade por faixa de KM</a></dt><dd>Concentração de ocorrências em intervalos de quilometragem. Depende da extensão dos intervalos adotados.</dd></div>
+<div class="gl-entry" id="termo-comparacao-entre-anos" tabindex="-1"><dt><a href="#termo-comparacao-entre-anos">Comparação entre anos</a></dt><dd>Leitura de medidas em períodos distintos, que exige atenção a anos incompletos e diferenças de cobertura.</dd></div>
+</dl></section>
+      <p class="gl-note">As definições contextualizam os termos utilizados nesta aplicação. Leia os resultados junto dos filtros, unidades, períodos e regras apresentados em cada tela.</p>
+      <a href="#glossario">Voltar ao início ↑</a>
+    </div>
+  </div>
+</main>
+<script>
+
+(() => {
+  const root = document.querySelector('.glossary');
+  if (!root) return;
+  const form = root.querySelector('.gl-search');
+  const input = root.querySelector('#gl-search');
+  const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
+  const entries = Array.from(root.querySelectorAll('.gl-entry'), element => ({ element, text: normalize(element.textContent), link: root.querySelector('[data-term="' + element.id + '"]') }));
+  const filter = () => {
+    const words = normalize(input.value).trim().split(/\s+/).filter(Boolean);
+    let visible = 0;
+    entries.forEach(({element, text, link}) => { const match = words.every(word => text.includes(word)); element.hidden = !match; link.hidden = !match; if(match) visible++; });
+    root.querySelectorAll('.gl-group').forEach(group => { group.hidden = !group.querySelector('.gl-entry:not([hidden])'); });
+    root.querySelector('.gl-count').textContent = visible + ' de ' + entries.length + ' termos';
+    root.querySelector('.gl-empty').hidden = visible !== 0;
+  };
+  const reveal = () => {
+    let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target || !root.contains(target)) return;
+    if (target.closest('[hidden]')) { input.value = ''; filter(); }
+    target.scrollIntoView({block:'start'});
+  };
+  form.addEventListener('submit', event => event.preventDefault());
+  form.addEventListener('reset', event => { event.preventDefault(); input.value = ''; filter(); input.focus(); });
+  input.addEventListener('input', filter);
+  window.addEventListener('hashchange', reveal);
+  form.hidden = false; filter(); reveal();
+})();
+
+</script>
+</body>
+</html>
