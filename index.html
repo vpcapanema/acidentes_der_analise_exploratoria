@@ -1154,6 +1154,10 @@
     pointer-events: none;
   }
 
+  .govsp-topo {
+    display: none !important;
+  }
+
   .govsp-topo * {
 
     color: #000;
@@ -1740,6 +1744,9 @@
   </div>
 
 </div><!-- /.sigma-cabecalho-fixo -->
+<script>
+  document.querySelector('.govsp-topo')?.remove();
+</script>
 <div class="sigma-cabecalho-espacador" aria-hidden="true"></div>
 
 <script>
