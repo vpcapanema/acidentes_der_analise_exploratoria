@@ -22,56 +22,64 @@
         }
         .page-hero {
             background: linear-gradient(135deg, var(--pli-deep) 0%, var(--pli-navy) 60%, var(--pli-blue) 100%);
-            border-radius: var(--pli-radius-lg);
-            padding: var(--pli-space-2xl) var(--pli-space-xl);
+            border-radius: 8px;
+            min-height: 9rem;
+            padding: 1.5rem;
             margin-bottom: var(--pli-space-xl);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            box-shadow: var(--pli-shadow-hover);
-            position: relative;
-            overflow: hidden;
-        }
-        .page-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 70% 40%, rgba(62,194,110,0.12) 0%, transparent 60%);
-            pointer-events: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,.08);
         }
         .page-hero__icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(255,255,255,0.12);
-            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pli-green);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .page-hero__icon svg { width: 1em; height: 1em; fill: currentColor; }
+        .page-hero h1 {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto var(--pli-space-md);
-        }
-        .page-hero__icon svg { width: 34px; height: 34px; fill: var(--pli-green); }
-        .page-hero h1 {
+            gap: .6rem;
             color: var(--pli-white);
-            font-size: var(--pli-fs-2xl);
-            margin-bottom: var(--pli-space-sm);
+            font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.55;
+            margin: 0 0 .35rem;
             text-align: center;
         }
         .page-hero p {
-            color: rgba(255,255,255,0.82);
-            font-size: var(--pli-fs-md);
+            color: var(--pli-white);
+            font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif;
+            font-size: .84rem;
+            line-height: 1.55;
             text-align: center;
-            margin-bottom: 0;
+            margin: 0;
         }
         .page-hero__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(62,194,110,0.18);
-            border: 1px solid rgba(62,194,110,0.4);
-            color: var(--pli-green);
-            border-radius: 100px;
-            padding: 4px 14px;
-            font-size: var(--pli-fs-sm);
-            font-weight: var(--pli-fw-semibold);
-            margin-top: var(--pli-space-md);
+            display: block;
+            margin-top: .2rem;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: none;
+            color: var(--pli-white);
+            font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif;
+            font-size: .84rem;
+            font-weight: 600;
+            line-height: 1.55;
+            letter-spacing: .025em;
+        }
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.15rem; }
         }
         .stats-grid {
             display: grid;
@@ -1863,21 +1871,11 @@
     <main class="sigma-main">
 
         <section class="page-hero">
-            <div class="page-hero__icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
-                </svg>
-            </div>
-            <h1>Análise de Acidentes Rodoviários</h1>
-<p style="margin:.75rem 0"><a href="glossario" style="color:inherit;font:inherit;text-decoration:underline;text-underline-offset:3px">Glossário técnico-conceitual</a></p>
+            <h1><span class="page-hero__icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg></span>Análise de Acidentes Rodoviários</h1>
             <p>Análise Exploratória Completa — Rodovias Estaduais de São Paulo</p>
-            <div class="page-hero__badge">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
-                </svg>
-                2023 · 2024 · 2025 — Dados Consolidados
-            </div>
+            <div class="page-hero__badge">DER/SP · 2023 · 2024 · 2025</div>
         </section>
+        <p style="margin:.75rem 0;text-align:center"><a href="glossario" style="color:inherit;font:inherit;text-decoration:underline;text-underline-offset:3px">Glossário técnico-conceitual</a></p>
 
         <div class="stats-grid">
             <div class="sigma-container-card">
