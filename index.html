@@ -21,11 +21,16 @@
             padding: 0 var(--pli-space-xl) var(--pli-space-3xl);
         }
         .page-hero {
+            width: min(1400px, calc(100vw - 2rem));
+            max-width: none;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
             background: linear-gradient(135deg, var(--pli-deep) 0%, var(--pli-navy) 60%, var(--pli-blue) 100%);
             border-radius: 8px;
             min-height: 9rem;
             padding: 1.5rem;
-            margin-bottom: var(--pli-space-xl);
+            margin: 45px auto 1.5rem;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
